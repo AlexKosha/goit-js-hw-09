@@ -27,6 +27,8 @@ const options = {
       Notify.failure('Please choose a date in the future');
       return;
     }
+
+    refs.input.disabled = true;
     refs.btnStart.disabled = false;
     console.log(selectedDates[0]);
   },
