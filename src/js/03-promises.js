@@ -20,7 +20,7 @@ function onBtnClick(e) {
   // console.log(delay, delayStep, amount);
 
   for (let i = 0; i < amount; i += 1) {
-    createPromise(i, delay + i * delayStep)
+    createPromise(i + 1, delay + i * delayStep)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
@@ -29,6 +29,7 @@ function onBtnClick(e) {
       });
   }
 }
+
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
